@@ -1,0 +1,160 @@
+html{
+    height: min-content;
+}
+body{
+    background-color: #e2e2e2;
+    font-family: "Roboto";
+}
+.header__container{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 20px;
+    height: min-content;
+    width: 100vw;
+}
+.header__content{
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+    height: min-content;
+}
+.header__title{
+    align-self: center;
+    color: #3b5bdb;
+    font-family: "Roboto";
+}
+.header__input--search,.input__box{
+    width: 30%;
+    height: 60px;
+    border: white solid;
+    align-items: center;
+    padding: 20px;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+}
+.main__container{
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form__container{
+    background-color: white;
+    min-height: 300px;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.title2{
+    height: 100%;
+    min-width: 60vw;
+    display: flex;
+    padding-bottom: 40px;
+}
+.form__input-container{
+    min-width: 60vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.form__input--text{
+    width: 50%;
+    height: fit-content;
+    border: white solid;
+    align-items: center;
+    padding: 20px;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+}
+.form__input--priority{
+    width: 35%;
+    height: fit-content;
+    border: white solid 0px;
+    align-items: center;
+    padding: 20px;
+    margin: 2px;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+}
+.form__button--add-task{
+    width: 60vw;
+    border: white solid 0px;
+    align-items: center;
+    padding: 20px;
+    background-color: #3b5bdb;
+    border-radius: 10px;
+    color: white;
+}
+.tasks__container{
+    background-color: white;
+    height: auto;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    padding-top: 50px;
+}
+.tasks__container, h2{
+    height: 100%;
+    min-width: 60vw;
+    display: flex;
+    padding-bottom: 25px;
+}
+.tasks__list{
+    min-width: 60vw;
+    height: min-content;
+    padding-bottom: 20px;
+}
+.task__item{
+    min-width: fit-content;
+    height: 30px;
+    border: white solid;
+    align-items: center;
+    padding: 20px;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.task-info__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.span-urgent{
+    border: #e40404 solid 5px;
+    border-radius: 20px;
+    margin-right:  5px;
+    height: 0px;
+}
+.span-important{
+    border: #f3a703 solid 5px;
+    border-radius: 20px;
+    margin-right:  5px;
+    height: 0px;
+}
+.span-normal{
+    border: #028302 solid 5px;
+    border-radius: 20px;
+    margin-right:  5px;
+    height: 0px;
+}
+.task__button--remove-task{
+    background-image: url(/assets/trash-icon.svg);
+    padding: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
