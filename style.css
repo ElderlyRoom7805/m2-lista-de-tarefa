@@ -152,7 +152,7 @@ body{
     height: 0px;
 }
 .task__button--remove-task{
-    background-image: url(/assets/trash-icon.svg);
+    background-image: url(assets/trash-icon.svg);
     padding: 8px;
     background-position: center;
     background-repeat: no-repeat;
