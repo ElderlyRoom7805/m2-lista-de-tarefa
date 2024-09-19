@@ -18,20 +18,24 @@ ul.removeChild(li[0]);
 ul.removeChild(li[0]);
 
 function renderElements(task){
+  const ulRender = document.querySelector(".tasks__list");
+  
   var codes = [];
   for(i=0; i<task.length; i++){
-    let a = createTaskItem(task[i].title, task[i].type);
+    let a = createTaskItem(task[i]);
     codes.push(a);
   };
   for(o=0; o<codes.length; o++){
-    ul.appendChild(codes[o])
+    ulRender.appendChild(codes[o])
   };
-  return ul;
+  return ulRender;
 }
 
 renderElements(tasks)
-function createTaskItem(ti, ty){
-
+function createTaskItem(obj){
+  const objTi = obj.title;
+  const objTy = obj.type;
+  
   const liJs = document.createElement("li");
   const spanJs = document.createElement("span");
   const divJs = document.createElement("div");
@@ -39,15 +43,10 @@ function createTaskItem(ti, ty){
   const buttonJs = document.createElement("button");
   buttonJs.addEventListener("click", function (event){
     for(i=0; i<tasks.length; i++){
-      if(tasks[i].title === ti){
+      if(tasks[i].title === objTi){
+        tasks.splice(i, 1);
         liJs.remove();
         return 
-      }
-    };
-    for(i=0; i<arrValores.length; i++){
-      if(arrValores[i].title === ti){
-        liJs.remove();
-        return
       }
     };
   })
@@ -55,18 +54,18 @@ function createTaskItem(ti, ty){
   liJs.classList.add("task__item");
   divJs.classList.add("task-info__container");
   buttonJs.classList.add("task__button--remove-task");
-  if(ty.toLowerCase() === "urgente"){
+  if(objTy.toLowerCase() === "urgente"){
     spanJs.classList.add("task-type")
     spanJs.classList.add("span-urgent")
-  } else if(ty.toLowerCase() === "importante"){
+  } else if(objTy.toLowerCase() === "importante"){
     spanJs.classList.add("task-type")
     spanJs.classList.add("span-important")
-  } else if(ty.toLowerCase() === "normal"){
+  } else if(objTy.toLowerCase() === "normal"){
     spanJs.classList.add("task-type")
     spanJs.classList.add("span-normal")
   };
   
-  pJs.innerText = ti;
+  pJs.innerText = objTi;
   
   liJs.appendChild(divJs);
   liJs.appendChild(buttonJs);
@@ -78,15 +77,15 @@ function createTaskItem(ti, ty){
 
 const arrValores = [];
 form.addEventListener("submit", function(event) {
-  event.preventDefault()
+  event.preventDefault();
   
   const input = document.querySelector(".form__input--text");
   const select = document.querySelector(".form__input--priority");
-  const valores = {title: input.value ,type: select.value }
-  arrValores.push(valores)
-  tasks.push(valores)
+  const valores = {title: input.value ,type: select.value };
+  arrValores.push(valores);
+  tasks.push(valores);
 
-  renderElements(arrValores)
-  arrValores.pop()
+  renderElements(arrValores);
+  arrValores.pop();
 }
 )
