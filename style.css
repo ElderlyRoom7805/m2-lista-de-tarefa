@@ -1,5 +1,6 @@
 html{
     height: min-content;
+    font-family: "Roboto";
 }
 body{
     background-color: #e2e2e2;
@@ -62,6 +63,7 @@ body{
 .title2{
     height: 100%;
     min-width: 80%;
+    font-family: "Roboto";
 }
 .form__input-container{
     min-width: 80%;
@@ -113,6 +115,7 @@ body{
     height: 100%;
     min-width: 80%;
     margin-top: 40px;
+    font-family: "Roboto";
 }
 .tasks__list{
     min-width: 80%;
@@ -130,11 +133,15 @@ body{
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
+    font-family: "Roboto";
 }
 .task-info__container{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.task-info__container p{
+    font-family: "Roboto";
 }
 .span-urgent{
     border: #e40404 solid 5px;
